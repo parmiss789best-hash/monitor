@@ -1,0 +1,16 @@
+
+[Unit]
+Description=Asynchronous Network Monitoring Service
+After=network.target
+
+[Service]
+Type=simple
+User=network-monitor
+Group=network-monitor
+WorkingDirectory=/opt/network-monitor
+ExecStart=/usr/bin/python3 -m src.monitor
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
