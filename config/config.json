@@ -1,0 +1,24 @@
+{
+    "interval_seconds": 60,
+    "max_concurrency": 10,
+    "checks": [
+        {
+            "name": "Local HTTP",
+            "host": "127.0.0.1",
+            "port": 80,
+            "timeout_seconds": 3
+        },
+        {
+            "name": "Local HTTPS",
+            "host": "127.0.0.1",
+            "port": 443,
+            "timeout_seconds": 3
+        },
+        {
+            "name": "Local SSH",
+            "host": "127.0.0.1",
+            "port": 22,
+            "timeout_seconds": 3
+        }
+    ]
+}
